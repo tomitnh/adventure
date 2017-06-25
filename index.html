@@ -108,6 +108,16 @@
           ]
         });
       }
+
+      if (navigator.geolocation) {
+        console.log('Location Service is running...');
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log('Latitude: ' + position.coords.latitude);
+            console.log('Longitude: ' + position.coords.longitude);
+        });
+      }else{
+        console.log('Location Service is not running...');
+      }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV2qs_iQG1wxBMRiJ9uHGRVSXV5fpVjRw&callback=initMap"
     async defer></script>
