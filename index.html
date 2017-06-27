@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Styled Maps - Night Mode</title>
+    <title>Adventure Game</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -9,6 +9,16 @@
        * element that contains the map. */
       #map {
         height: 100%;
+      }
+      /* Marbleshootr's Div*/
+      #screen{
+        position: absolute; 
+        font-family: serif; 
+        font-size: small;
+        line-height: 100%;
+        text-align: center;
+        z-index: 1;
+        /*left: 540px;*/
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -20,28 +30,46 @@
     <script type="text/javascript" src="./gmaptheme.js"></script>
   </head>
   <body>
+    <div id="screen"></div>
     <div id="map"></div>
     <script>
       function initMap() {
-        // Styles a map in night mode.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 40.674, lng: -73.945},
-          zoom: 12,
+
+        // Create the Google Maps DOM using Default Location
+        // Zoom Level:
+        // 1:World, 5:Landmass/continent, 10:City, 15:Streets, 20:Buildings
+        var crds = {lat: 40.674, lng: -73.945};   // NYC
+
+        var gmap = new google.maps.Map(document.getElementById('map'), {
+          center: crds,
+          zoom: 11,   
           styles: GMapTheme.silver,
         });
-      }
 
-      if (navigator.geolocation) {
-        console.log('Location Service is running...');
-        navigator.geolocation.getCurrentPosition(function(position) {
-            console.log('Latitude: ' + position.coords.latitude);
-            console.log('Longitude: ' + position.coords.longitude);
-        });
-      }else{
-        console.log('Location Service is not running...');
+        // Get current position's coordinate
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+              
+              crds  = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+              // Reposition GMap's center 
+              gmap.setCenter(crds);
+
+              console.log('Current Location: ')
+              console.log('\tLatitude: ' + position.coords.latitude);
+              console.log('\tLongitude: ' + position.coords.longitude);
+              console.log('\tAccuracy: ' + position.coords.accuracy + "m");
+          });
+        }else{
+          console.log('Location Service is not available...');
+        }
       }
+      
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV2qs_iQG1wxBMRiJ9uHGRVSXV5fpVjRw&callback=initMap"
     async defer></script>
+    <script type="text/javascript" src="./marbleshootr.js"></script>
   </body>
 </html>
