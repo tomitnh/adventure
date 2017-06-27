@@ -30,7 +30,6 @@ https://developers.google.com/maps/documentation/javascript/get-api-key?refresh=
 
 Google Maps API Key: AIzaSyBV2qs_iQG1wxBMRiJ9uHGRVSXV5fpVjRw
 
-<<<<<<< HEAD
 =====================
 June 25th, 2017
 =====================
@@ -53,5 +52,19 @@ Free Water: Yes
 Free Alcohol: Yes
 Time Restriction: 24/7
 Money Restriction: Pay to Play, Pay to Sit
+
+=====================
+June 26th, 2017
+=====================
+
+What would the software architecture looks like? Considering the external cards, it might be beneficial to offload the indexing or storing some information outside of the database.
+
+[2322 455291] [Log] 
+Latitude: 26.47091401393707
+Longitude: -81.80088544044925
+Time Restriction: Dawn to Dusk
+Free Music: Yes
+Lost: Pair of Sandals..
+
 
 
