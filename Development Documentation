@@ -19,7 +19,7 @@ Game Goal:
  - Fantasy (Imagining...)
  - Narration (Write a story... and making it interactive)
 
- [2322 813432]: Began Prototyping 
+ [2322 813432] Began Prototyping 
 
 =====================
 June 23rd, 2017
@@ -57,7 +57,7 @@ Money Restriction: Pay to Play, Pay to Sit
 June 26th, 2017
 =====================
 
-What would the software architecture looks like? Considering the external cards, it might be beneficial to offload the indexing or storing some information outside of the database.
+Consideration: What would the software architecture looks like? With the external cards/drawings, it might be beneficial to offload the indexing or storing some information outside of the database.
 
 [2322 455291] [Log] 
 Latitude: 26.47091401393707
@@ -66,5 +66,65 @@ Time Restriction: Dawn to Dusk
 Free Music: Yes
 Lost: Pair of Sandals..
 
+Styling Map: https://mapstyle.withgoogle.com
 
+Google Maps coloring seems to be done server side then images are returned to the API user, so the styling is done in somewhat unconventional way (not with CSS but with JavaScript).
 
+[2322 391344] First Prototype completed
+
+=====================
+June 27th, 2017
+=====================
+
+Consideration: there are free data from the US Gov. for the weather that may be useful for the game.
+
+[2322 378177] [Log] 	
+Latitude: 27.055958208132374
+Longitude: -82.15893832172284
+Accuracy: 65m
+Time Restriction: 24/7
+Local Coin: Toledo
+Free Water: Yes
+
+[2322 370316] [Log] 	
+Latitude: 27.105247244924612
+Longitude: -82.4447931006721
+Accuracy: 65m
+Scenic View: Yes (Double Bridge Harbor)
+
+[2322 368173] [Log]
+Latitude: 27.25383193486601
+Longitude: -82.53297120288165
+Accuracy: 79.74957404560426m
+Scenic View: Yes (Ancient Oak Tree)
+Access Restriction: Private Property
+
+[2322 365910] [Log]
+Latitude: 27.271814743100894
+Longitude: -82.56191704981102
+Accuracy: 65m
+Scenic View: Yes
+Free Comfort: Yes (Soft Siesta Key's Sand)
+
+[2322 364273] [Log]
+Latitude: 27.269473970986656
+Longitude: -82.48014361948184
+Accuracy: 65m
+Local Coin: McIntosh
+
+Consideration: on long road trip, how to maintain hygeine and eating quality food? Stock up on freshwater, papertowel, plastic bags
+
+[2322 339909] [Log]
+Latitude: Unknown
+Longitude: Unknown
+Free Darkness: Yes
+Fictional POI: Mi#189 on I-75, Thousand Stars Hotel
+
+[2322 335130] [Log]
+Latitude: 26.471258806543275
+Longitude: -81.80091029307779
+Accuracy: 65m
+Free Food: Yes
+Free Bed: Yes
+
+Consideration: maximum road time between quality rest (6hr min on good bed?) shouldn't exceed 14 hr.
