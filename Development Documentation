@@ -112,7 +112,12 @@ Longitude: -82.48014361948184
 Accuracy: 65m
 Local Coin: McIntosh
 
-Consideration: on long road trip, how to maintain hygeine and eating quality food? Stock up on freshwater, papertowel, plastic bags
+Consideration: on long road trip, how to maintain hygeine and eating quality food? 
+Hygeine Problem:
+-Stock up on freshwater, papertowel, plastic bags
+-AirBnB every other day
+Quality Food Problem:
+-Stock up on cooked rice or bread (chinese restaurant/bakery)
 
 [2322 339909] [Log]
 Latitude: Unknown
@@ -127,4 +132,14 @@ Accuracy: 65m
 Free Food: Yes
 Free Bed: Yes
 
-Consideration: maximum road time between quality rest (6hr min on good bed?) shouldn't exceed 14 hr.
+Consideration: maximum road time between quality rest (6hr of sleep?) shouldn't exceed 14 hr.
+
+=====================
+June 29th, 2017
+=====================
+
+There are enough log in this development doc to have something interesting to be drawn on Google Maps. The data points have to be formatted to a usable form.
+
+One of the options is writing a Bash script to extract the data and create a JavaScript file with the data formatted as JSON. It's a flexible solution and the whole development is kept simple. The challenge is doing regex matching with Bash and creating a new file. When new data are added, the JSON file has to be recreated.
+
+The other option is using the Meteor framework and the MongoDB that is connected to it to store the data. However, this expand the development to include setting up server stuff which I'm not sure that's what I want yet.
